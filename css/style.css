@@ -1,0 +1,21 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.header a,
+.headre a:visited {
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.1em;
+  /* color: #ffffff; */
+}
+
+.list-no-style {
+  list-style: none;
+}
+
+.address {
+  font-style: normal;
+}
