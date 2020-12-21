@@ -2,17 +2,19 @@
   --accent: #ff6c00;
   --font-light-color: #9da4bd;
   --font-dark-color: #303030;
+  --main-font: "Open Sans", sans-serif;
+  --second-font: "Raleway", sans-serif;
 }
 /* =======COMPONENTS======= */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 600;
 }
 
 h1,
 h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--second-font);
   font-weight: bold;
 }
 
@@ -72,7 +74,7 @@ p {
 }
 
 .modal-open-btn {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -102,7 +104,8 @@ p {
   /* color: #ffffff; */
 }
 .header a:hover,
-.header a:focus {
+.header a:focus,
+.header a:active {
   color: var(--accent);
 }
 /* =======//HEADER======= */
@@ -117,11 +120,9 @@ p {
 }
 
 .top-left a:hover,
-.top-left a:focus {
+.top-left a:focus,
+.top-left a:active {
   color: var(--accent);
-}
-
-.top-right {
 }
 
 .top-right h1 {
@@ -196,20 +197,18 @@ p {
 }
 /* =======//Мастера======= */
 
-
-
 /* =======Контакты======= */
 .contacts h2 {
   /* color: #FFFFFF; */
 }
 
 .contacts p {
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 1.67;
-	letter-spacing: 0.02em;
-	color: var(--font-light-color);
-	}
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--font-light-color);
+}
 
 .contacts a {
   font-size: 18px;
@@ -217,14 +216,19 @@ p {
   line-height: 1.667;
   letter-spacing: 0.02em;
   color: var(--font-light-color);
+}
 /* =======//Контакты======= */
 
-
 .footer p {
-	font-style: normal;
-font-weight: 600;
-font-size: 11px;
-line-height: 15px;
-letter-spacing: 0.2em;
-color:var(--font-light-color);
+  font-style: normal;
+  font-size: 11px;
+  line-height: 1.363;
+  letter-spacing: 0.2em;
+  color: var(--font-light-color);
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+  color: var(--accent);
 }
