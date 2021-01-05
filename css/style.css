@@ -6,6 +6,7 @@
   --second-font: "Raleway", sans-serif;
 }
 /* =======COMPONENTS======= */
+
 body {
   font-family: var(--main-font);
   font-style: normal;
@@ -69,6 +70,12 @@ p {
   list-style: none;
 }
 
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 .address {
   font-style: normal;
 }
@@ -127,7 +134,7 @@ p {
 
 .top-right h1 {
   font-size: 72px;
-  line-height: 1.18;
+  line-height: 1.181;
   letter-spacing: 0.05em;
   /* color: #ffffff; */
 }
