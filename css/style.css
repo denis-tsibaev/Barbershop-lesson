@@ -15,6 +15,8 @@ body {
 
 h1,
 h2 {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: var(--second-font);
   font-weight: bold;
 }
@@ -30,6 +32,7 @@ a {
 }
 
 p {
+  margin: 0;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.857;
@@ -38,6 +41,7 @@ p {
 }
 
 .subtitle {
+  margin-bottom: 20px;
   font-size: 11px;
   line-height: 1.364;
   letter-spacing: 0.1em;
@@ -68,12 +72,18 @@ p {
 }
 .list-no-style {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.section {
+  padding: 130px 0;
 }
 
 .address {
@@ -89,6 +99,13 @@ p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #ffffff;
+
+  /* width: 160px; */
+  /* min-height: 40px; */
+
+  border: 1px solid var(--accent);
+  border-radius: 25px;
+  padding: 12px 20px;
 }
 
 .modal-open-btn-light {
@@ -115,9 +132,63 @@ p {
 .header a:active {
   color: var(--accent);
 }
+
+.header {
+  background-color: teal;
+  padding: 40px 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+}
+
+.header .logo {
+  margin-right: 70px;
+}
+
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+}
+
+.menu-list .item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header .address {
+  margin-left: auto;
+  margin-right: 40px;
+}
 /* =======//HEADER======= */
 
-/* =======Топ======= */
+/* =======top======= */
+.top {
+  background-color: lightblue;
+}
+
+.top .container {
+  display: flex;
+  background-color: lightpink;
+}
+
+.top-left {
+  width: 100px;
+}
+
+.top-left .list {
+  display: flex;
+}
+
+.top-left .list .item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .top-left a,
 .top-left a:visited {
   font-size: 11px;
@@ -132,6 +203,15 @@ p {
   color: var(--accent);
 }
 
+.top-right {
+  background-color: #ffffff;
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-right: 525px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+}
+
 .top-right h1 {
   font-size: 72px;
   line-height: 1.181;
@@ -141,9 +221,51 @@ p {
 /* =======//Топ======= */
 
 /* =======О нас======= */
+.about {
+  background-color: lightsalmon;
+}
+
+.about .container {
+  background-color: lightslategrey;
+  display: flex;
+}
+
+.about .list {
+  display: flex;
+}
+
+.about .list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-right {
+  padding-left: 64px;
+}
+
+.about-right .description {
+  margin-bottom: 20px;
+}
+
+.about-right .modal-open-btn {
+  margin-top: 40px;
+}
+
 /* =======//О нас======= */
 
 /* =======Услуги и цены======= */
+
+.services {
+  background-color: lightcyan;
+}
+
+.services .container {
+  background-color: lightslategray;
+}
+
+.services .prices {
+  display: flex;
+}
+
 .services h2 {
   /* color: #ffffff; */
 }
