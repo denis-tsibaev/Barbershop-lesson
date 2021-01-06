@@ -115,11 +115,9 @@ p {
 .modal-open-btn-dark {
   color: var(--font-dark-color);
 }
-
 /* =======//COMPONENTS======= */
 
-/* =======HEADER======= */
-
+/* =======Шапка сайта======= */
 .header a,
 .headre a:visited {
   font-size: 12px;
@@ -165,7 +163,7 @@ p {
   margin-left: auto;
   margin-right: 40px;
 }
-/* =======//HEADER======= */
+/* =======//Шапка сайта======= */
 
 /* =======top======= */
 .top {
@@ -218,9 +216,10 @@ p {
   letter-spacing: 0.05em;
   /* color: #ffffff; */
 }
-/* =======//Топ======= */
+/* =======//top======= */
 
 /* =======О нас======= */
+
 .about {
   background-color: lightsalmon;
 }
@@ -264,6 +263,24 @@ p {
 
 .services .prices {
   display: flex;
+  background-color: cyan;
+  margin-bottom: 50px;
+}
+
+.services .prices .list {
+  width: 50%;
+  outline: 1px dashed black;
+  padding: 30px 40px;
+}
+
+.services .prices .list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .modal-open-btn {
+  display: block;
+  margin: 0 auto;
 }
 
 .services h2 {
@@ -279,6 +296,39 @@ p {
 /* =======//Услуги и цены======= */
 
 /* =======//Достижения======= */
+
+.achievements {
+  background-color: lightcoral;
+}
+
+.achievements .container {
+  background-color: beige;
+  display: flex;
+}
+
+.achievements-left {
+  width: 370px;
+  outline: 1px dashed black;
+}
+
+.achievements-left .list {
+  display: flex;
+}
+
+.achievements-left .list li {
+  background-color: #ffffff;
+  width: 170px;
+  height: 133px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.achievements-left .list li:nth-child(even) {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
 .achievements-left .number {
   font-style: normal;
   font-weight: bold;
@@ -299,14 +349,41 @@ p {
   text-align: center;
 }
 
+.achievements-right {
+  /* width: 630px; */
+  padding-left: 130px;
+  padding-right: 200px;
+  outline: 1px dashed black;
+}
+
 .achievements h2 {
   color: var(--font-dark-color);
 }
 /* =======//Достижения======= */
 
-/* =======Мастера======= */
+/* ======= Наши мастера======= */
+
+.masters {
+  background-color: lightskyblue;
+}
+
+.masters .container {
+  background-color: bisque;
+}
+
+.masters .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.masters .list .description {
+  padding: 30px 20px;
+  text-align: center;
+}
+
 .masters h2 {
   color: var(--font-dark-color);
+  margin-bottom: 44px;
 }
 
 .masters h3 {
@@ -315,6 +392,8 @@ p {
   /* text-align: center; */
   letter-spacing: 0.02em;
   color: var(--font-dark-color);
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 .masters ul p {
@@ -324,10 +403,46 @@ p {
   letter-spacing: 0.02em;
   color: var(--accent);
 }
-/* =======//Мастера======= */
+/* =======//Наши мастера======= */
+
+/* =======Фотогалерея======= */
+
+/* =======//Фотогалерея======= */
+.gallery {
+  background-color: lightsalmon;
+}
+
+.gallery .container {
+  background-color: lightslategray;
+}
+
+.gallery .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery .subtitle {
+  margin-bottom: 44px;
+}
 
 /* =======Контакты======= */
+.contacts {
+  background-color: lightcyan;
+}
+
+.contacts .container {
+  background-color: bisque;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-right {
+  width: 50%;
+  padding: 130px 100px;
+}
+
 .contacts h2 {
+  margin-bottom: 40px;
   /* color: #FFFFFF; */
 }
 
@@ -339,6 +454,18 @@ p {
   color: var(--font-light-color);
 }
 
+.contacts-right .list li {
+  margin-bottom: 20px;
+}
+
+.contacts-right .list .city {
+  width: 190px;
+}
+
+.contacts-right .subtitle {
+  margin-top: 70px;
+}
+
 .contacts a {
   font-size: 18px;
   font-weight: normal;
@@ -347,6 +474,27 @@ p {
   color: var(--font-light-color);
 }
 /* =======//Контакты======= */
+
+.footer {
+  background-color: lightcoral;
+  padding: 56px 0;
+}
+
+.footer .container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .list {
+  display: flex;
+  align-items: center;
+}
+
+.footer .list li:not(:last-child) {
+  margin-right: 40px;
+}
 
 .footer p {
   font-style: normal;
