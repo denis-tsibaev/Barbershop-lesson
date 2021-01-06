@@ -132,14 +132,14 @@ p {
 }
 
 .header {
-  background-color: teal;
+  /* background-color: teal; */
   padding: 40px 0;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 .header .logo {
@@ -167,12 +167,12 @@ p {
 
 /* =======top======= */
 .top {
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
 .top .container {
   display: flex;
-  background-color: lightpink;
+  /* background-color: lightpink; */
 }
 
 .top-left {
@@ -202,7 +202,7 @@ p {
 }
 
 .top-right {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   flex-grow: 1;
   padding-top: 272px;
   padding-right: 525px;
@@ -221,11 +221,11 @@ p {
 /* =======О нас======= */
 
 .about {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
 }
 
 .about .container {
-  background-color: lightslategrey;
+  /* background-color: lightslategrey; */
   display: flex;
 }
 
@@ -254,22 +254,22 @@ p {
 /* =======Услуги и цены======= */
 
 .services {
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
 }
 
 .services .container {
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
 }
 
 .services .prices {
   display: flex;
-  background-color: cyan;
+  /* background-color: cyan; */
   margin-bottom: 50px;
 }
 
 .services .prices .list {
   width: 50%;
-  outline: 1px dashed black;
+  /* outline: 1px dashed black; */
   padding: 30px 40px;
 }
 
@@ -298,17 +298,17 @@ p {
 /* =======//Достижения======= */
 
 .achievements {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 }
 
 .achievements .container {
-  background-color: beige;
+  /* background-color: beige; */
   display: flex;
 }
 
 .achievements-left {
   width: 370px;
-  outline: 1px dashed black;
+  /* outline: 1px dashed black; */
 }
 
 .achievements-left .list {
@@ -316,7 +316,7 @@ p {
 }
 
 .achievements-left .list li {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   width: 170px;
   height: 133px;
   margin-bottom: 30px;
@@ -353,7 +353,7 @@ p {
   /* width: 630px; */
   padding-left: 130px;
   padding-right: 200px;
-  outline: 1px dashed black;
+  /* outline: 1px dashed black; */
 }
 
 .achievements h2 {
@@ -364,11 +364,11 @@ p {
 /* ======= Наши мастера======= */
 
 .masters {
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
 }
 
 .masters .container {
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 .masters .list {
@@ -409,11 +409,11 @@ p {
 
 /* =======//Фотогалерея======= */
 .gallery {
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
 }
 
 .gallery .container {
-  background-color: lightslategray;
+  /* background-color: lightslategray; */
 }
 
 .gallery .list {
@@ -427,11 +427,11 @@ p {
 
 /* =======Контакты======= */
 .contacts {
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
 }
 
 .contacts .container {
-  background-color: bisque;
+  /* background-color: bisque; */
   display: flex;
   justify-content: space-between;
 }
@@ -476,12 +476,12 @@ p {
 /* =======//Контакты======= */
 
 .footer {
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   padding: 56px 0;
 }
 
 .footer .container {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   display: flex;
   justify-content: space-between;
   align-items: center;
