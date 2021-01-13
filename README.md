@@ -1,1 +1,2 @@
-# Barbershop-lesson-2
+# Barbershop-lesson
+Сделаны флексы
