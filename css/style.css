@@ -4,9 +4,9 @@
   --font-dark-color: #303030;
   --main-font: "Open Sans", sans-serif;
   --second-font: "Raleway", sans-serif;
+  --bg-light: #f7f7f7;
 }
 /* =======COMPONENTS======= */
-
 body {
   font-family: var(--main-font);
   font-style: normal;
@@ -46,14 +46,32 @@ p {
   line-height: 1.364;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
 }
 
 .subtitle-light {
   color: rgba(157, 164, 189, 0.6);
 }
 
+.subtitle-light::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
 .subtitle-dark {
   color: var(--font-dark-color);
+}
+
+.subtitle-dark::before {
+  background-color: var(--font-dark-color);
 }
 
 .description {
@@ -99,6 +117,7 @@ p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #ffffff;
+  background-color: transparent;
 
   /* width: 160px; */
   /* min-height: 40px; */
@@ -132,14 +151,12 @@ p {
 }
 
 .header {
-  /* background-color: teal; */
   padding: 40px 0;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  /* background-color: grey; */
 }
 
 .header .logo {
@@ -166,13 +183,8 @@ p {
 /* =======//Шапка сайта======= */
 
 /* =======top======= */
-.top {
-  /* background-color: lightblue; */
-}
-
 .top .container {
   display: flex;
-  /* background-color: lightpink; */
 }
 
 .top-left {
@@ -181,6 +193,17 @@ p {
 
 .top-left .list {
   display: flex;
+  align-items: center;
+}
+
+.top-left .list::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  display: block;
+  flex-shrink: 0;
+  background: var(--font-dark-color);
+  margin-right: 40px;
 }
 
 .top-left .list .item:not(:last-child) {
@@ -202,7 +225,12 @@ p {
 }
 
 .top-right {
-  /* background-color: #ffffff; */
+  background-color: #000000;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url(../img/bg-top.jpg);
   flex-grow: 1;
   padding-top: 272px;
   padding-right: 525px;
@@ -214,18 +242,15 @@ p {
   font-size: 72px;
   line-height: 1.181;
   letter-spacing: 0.05em;
-  /* color: #ffffff; */
+  color: #ffffff;
 }
 /* =======//top======= */
 
 /* =======О нас======= */
-
 .about {
-  /* background-color: lightsalmon; */
 }
 
 .about .container {
-  /* background-color: lightslategrey; */
   display: flex;
 }
 
@@ -248,34 +273,52 @@ p {
 .about-right .modal-open-btn {
   margin-top: 40px;
 }
-
 /* =======//О нас======= */
 
 /* =======Услуги и цены======= */
-
 .services {
-  /* background-color: lightcyan; */
+  background-color: #111319;
+  background-image: url("../img/bg-services.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .services .container {
-  /* background-color: lightslategray; */
 }
 
 .services .prices {
   display: flex;
-  /* background-color: cyan; */
   margin-bottom: 50px;
 }
 
 .services .prices .list {
   width: 50%;
-  /* outline: 1px dashed black; */
   padding: 30px 40px;
+}
+.services .prices .list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.services .prices .list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .services .prices .list li {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.services .prices .list li:last-child {
+  margin-bottom: 0;
 }
 
 .services .modal-open-btn {
@@ -284,7 +327,7 @@ p {
 }
 
 .services h2 {
-  /* color: #ffffff; */
+  color: #ffffff;
 }
 .services ul span {
   font-size: 18px;
@@ -296,19 +339,15 @@ p {
 /* =======//Услуги и цены======= */
 
 /* =======//Достижения======= */
-
 .achievements {
-  /* background-color: lightcoral; */
 }
 
 .achievements .container {
-  /* background-color: beige; */
   display: flex;
 }
 
 .achievements-left {
   width: 370px;
-  /* outline: 1px dashed black; */
 }
 
 .achievements-left .list {
@@ -316,11 +355,11 @@ p {
 }
 
 .achievements-left .list li {
-  /* background-color: #ffffff; */
   width: 170px;
   height: 133px;
   margin-bottom: 30px;
   padding: 20px;
+  background-color: var(--bg-light);
 }
 
 .achievements-left .list li:nth-child(even) {
@@ -353,7 +392,6 @@ p {
   /* width: 630px; */
   padding-left: 130px;
   padding-right: 200px;
-  /* outline: 1px dashed black; */
 }
 
 .achievements h2 {
@@ -362,13 +400,11 @@ p {
 /* =======//Достижения======= */
 
 /* ======= Наши мастера======= */
-
 .masters {
-  /* background-color: lightskyblue; */
+  background-color: var(--bg-light);
 }
 
 .masters .container {
-  /* background-color: bisque; */
 }
 
 .masters .list {
@@ -386,7 +422,7 @@ p {
   margin-bottom: 44px;
 }
 
-.masters h3 {
+.masters .list h3 {
   font-size: 18px;
   line-height: 1.389;
   /* text-align: center; */
@@ -396,12 +432,42 @@ p {
   margin-bottom: 8px;
 }
 
-.masters ul p {
+.masters .list p {
   font-size: 14px;
   line-height: 1.357;
   /* text-align: center; */
   letter-spacing: 0.02em;
   color: var(--accent);
+  margin-bottom: 30px;
+}
+
+.masters .social {
+  display: flex;
+  justify-content: center;
+}
+
+.masters .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.masters .social a:hover svg,
+.masters .social a:focus svg {
+  fill: var(--accent);
+}
+
+.masters .social svg {
+  width: 20px;
+  height: 20px;
+}
+
+.masters .social li:not(:last-child) {
+  margin-right: 10px;
 }
 /* =======//Наши мастера======= */
 
@@ -409,11 +475,9 @@ p {
 
 /* =======//Фотогалерея======= */
 .gallery {
-  /* background-color: lightsalmon; */
 }
 
 .gallery .container {
-  /* background-color: lightslategray; */
 }
 
 .gallery .list {
@@ -427,11 +491,9 @@ p {
 
 /* =======Контакты======= */
 .contacts {
-  /* background-color: lightcyan; */
 }
 
 .contacts .container {
-  /* background-color: bisque; */
   display: flex;
   justify-content: space-between;
 }
@@ -476,12 +538,10 @@ p {
 /* =======//Контакты======= */
 
 .footer {
-  /* background-color: lightcoral; */
   padding: 56px 0;
 }
 
 .footer .container {
-  /* background-color: #ffffff; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -490,6 +550,15 @@ p {
 .footer .list {
   display: flex;
   align-items: center;
+}
+
+.footer .list::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 60px;
+  background: var(--font-dark-color);
+  margin-right: 40px;
 }
 
 .footer .list li:not(:last-child) {
