@@ -12,15 +12,17 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
 		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
 	<!-- Шапка сайта -->
 	<header class="header">
 		<div class="container">
 			<nav class="menu">
-				<a href="./index.html" class="logo" aria-label="Логотип">
+				<a href="./index.html" class="logo animate__heartBeat" aria-label="Логотип">
 					<svg width="69" height="55">
 						<use href=" ./img/sprite.svg#icon-logo-barbershop"></use>
 					</svg>
@@ -44,12 +46,13 @@
 			<address class="address">
 				<a href="tel:+380441111111">+38 044 111 11 11</a>
 			</address>
-			<button class="modal-open-btn modal-open-btn-light">
+			<button class="modal-open-btn modal-open-btn-light" data-modal-open>
 				онлайн-запись
 			</button>
 		</div>
 	</header>
 	<!-- /Шапка сайта -->
+
 	<main>
 
 		<!-- top -->
@@ -96,7 +99,7 @@
 						и жаждет перемен. И когда ты попадешь в руки нашего мастера,
 						то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне".
 						Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
-					<button class="modal-open-btn modal-open-btn-dark">онлайн-запись</button>
+					<button class="modal-open-btn modal-open-btn-dark" data-modal-open>онлайн-запись</button>
 				</div>
 			</div>
 
@@ -140,7 +143,7 @@
 					</ul>
 				</div>
 
-				<button class="modal-open-btn modal-open-btn-light">онлайн-запись</button>
+				<button class="modal-open-btn modal-open-btn-light" data-modal-open>онлайн-запись</button>
 			</div>
 
 		</section>
@@ -368,6 +371,12 @@
 
 	</footer>
 
+	<div class="backdrop is-hidden" data-modal>
+		<div class="modal">
+			<button type="button" class="modal-close-btn" data-modal-close>X</button>
+		</div>
+	</div>
+	<script src="./modal.js"></script>
 </body>
 
 </html>
