@@ -569,21 +569,38 @@ p {
 
 /* =======Контакты======= */
 .contacts {
-}
-
-.contacts .container {
   display: flex;
   justify-content: space-between;
+  background-color: #191c26;
+}
+
+.contacts-left,
+.contacts-right {
+  width: 50%;
+}
+
+.contacts-left {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.contacts-left .form {
+  background-color: lightgrey;
+  width: 560px;
 }
 
 .contacts-right {
+  background-image: url("../img/bg-contacts.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 50%;
   padding: 130px 100px;
 }
 
 .contacts h2 {
   margin-bottom: 40px;
-  /* color: #FFFFFF; */
+  color: #ffffff;
 }
 
 .contacts p {
