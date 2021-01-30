@@ -335,15 +335,19 @@
 		<!-- Контакты -->
 		<section id="contacts" class="contacts">
 			<div class="contacts-left section">
-				<form action="" class="form">
+				<div class="form-wrapper">
 					<h2>Онлайн-запись</h2>
-					<input type="text" class="form-input" name="user-name" placeholder="Имя*" required>
-					<input type="tel" class="form-input" name="user-phone" placeholder="Телефон*" required>
-					<textarea name="user-message" class="form-textarea" placeholder="сообщение"></textarea>
-					<button type="submit" class="form-submit-btn">
-						Отправить
-					</button>
-				</form>
+					<form action="" class="form" autocomplete="off">
+						<input type="text" class="form-input form-input-name" name="user-name" placeholder="Имя*"
+							required pattern="[А-Яа-я]{2,}">
+						<input type="tel" class="form-input form-input-tel" name="user-phone" placeholder="Телефон*"
+							required pattern="\+[0-9]{11}">
+						<textarea name="user-message" class="form-textarea" placeholder="сообщение"></textarea>
+						<button type="submit" class="form-submit-btn">
+							Отправить
+						</button>
+					</form>
+				</div>
 			</div>
 			<div class="contacts-right section">
 				<h2>Контакты</h2>

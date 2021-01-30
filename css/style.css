@@ -1,12 +1,12 @@
 :root {
+  --main-font: "Open Sans", sans-serif;
+  --second-font: "Raleway", sans-serif;
   --accent: #ff6c00;
   --font-light-color: #9da4bd;
   --font-dark-color: #303030;
-  --main-font: "Open Sans", sans-serif;
-  --second-font: "Raleway", sans-serif;
   --bg-light: #f7f7f7;
-  --white-color: #ffffff;
   --description-dark: #555555;
+  --white-color: #ffffff;
 }
 /* =======COMPONENTS======= */
 body {
@@ -137,7 +137,8 @@ p {
   transition: background-color 250ms, color 500ms;
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background-color: var(--font-dark-color);
   color: var(--white-color);
 }
@@ -162,7 +163,8 @@ p {
   font-style: normal;
 }
 
-.modal-open-btn {
+.modal-open-btn,
+.form-submit-btn {
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 600;
@@ -180,12 +182,16 @@ p {
   transition: all 250ms;
 }
 
-.modal-open-btn:hover {
+.modal-open-btn:hover,
+.modal-open-btn:focus,
+.form-submit-btn:hover,
+.form-submit-btn:focus {
   color: var(--white-color);
   background-color: var(--accent);
 }
 
-.modal-open-btn-light {
+.modal-open-btn-light,
+.form-submit-btn {
   color: var(--white-color);
 }
 
@@ -529,7 +535,8 @@ p {
   transition: all 250ms;
 }
 
-.masters .social a:hover {
+.masters .social a:hover,
+.masters .social a:focus {
   background-color: var(--font-dark-color);
 }
 
@@ -586,8 +593,58 @@ p {
 }
 
 .contacts-left .form {
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   width: 560px;
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-input-name {
+  width: 270px;
+}
+
+.form-input-tel {
+  width: 260px;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 90px;
+  margin: 44px 0;
+  resize: none;
+}
+
+.form-input,
+.form-textarea {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+
+  background: none;
+  border: none;
+  color: var(--white-color);
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding: 8px 0;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-bottom-color: var(--white-color);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  text-transform: uppercase;
+}
+
+.form-input:focus::placeholder,
+.form-textarea:focus::placeholder {
+  color: var(--white-color);
 }
 
 .contacts-right {
