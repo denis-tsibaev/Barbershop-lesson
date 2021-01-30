@@ -385,6 +385,7 @@
 	<div class="backdrop" data-modal>
 		<div class="modal">
 			<button type="button" class="modal-close-btn" data-modal-close>X</button>
+			<h3>Оставьте свои данные, мы вам перезвоним</h3>
 
 			<form action="" class="modal-form">
 				<label>Имя*
@@ -404,7 +405,13 @@
 				<label>Комментарий
 					<textarea name="user-message" class="modal-textarea" placeholder="Введите текст"></textarea>
 				</label>
-				<button type="submit" class="modal-submit-btn">
+
+				<label class="label-chekbox">
+					<input type="checkbox" name="contract" value="accept" required>
+					Соглашаюсь с рассылкой и принимаю &nbsp<a href="">Условия договора</a>
+				</label>
+
+				<button type="submit" class="modal-form-submit-btn">
 					Отправить
 				</button>
 			</form>
