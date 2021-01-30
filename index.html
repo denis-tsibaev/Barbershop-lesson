@@ -381,10 +381,33 @@
 		</div>
 
 	</footer>
-
-	<div class="backdrop is-hidden" data-modal>
+	<!-- class="backdrop is-hidden" вернуть -->
+	<div class="backdrop" data-modal>
 		<div class="modal">
 			<button type="button" class="modal-close-btn" data-modal-close>X</button>
+
+			<form action="" class="modal-form">
+				<label>Имя*
+					<input type="text" class="modal-input modal-input-name" name="user-name" required
+						pattern="[А-Яа-я]{2,}">
+				</label>
+
+				<label>Телефон*
+					<input type="tel" class="modal-input modal-input-tel" name="user-phone" required
+						pattern="\+[0-9]{11}">
+				</label>
+
+				<label>Почта
+					<input type="email" class="modal-input modal-input-email" name="user-email">
+				</label>
+
+				<label>Комментарий
+					<textarea name="user-message" class="modal-textarea" placeholder="Введите текст"></textarea>
+				</label>
+				<button type="submit" class="modal-submit-btn">
+					Отправить
+				</button>
+			</form>
 		</div>
 	</div>
 	<script src="./modal.js"></script>
