@@ -388,27 +388,44 @@
 			<h3>Оставьте свои данные, мы вам перезвоним</h3>
 
 			<form action="" class="modal-form">
-				<label>Имя*
-					<input type="text" class="modal-input modal-input-name" name="user-name" required
-						pattern="[А-Яа-я]{2,}">
+				<label class="modal-form-label">Имя*
+					<span class="input-wrapper">
+						<svg class="modal-icon">
+							<use href='./img/sprite.svg#icon-person-black-18dp'></use>
+						</svg>
+						<input type="text" class="modal-input modal-input-name" name="user-name" required
+							pattern="[А-Яа-я]{2,}">
+					</span>
 				</label>
 
-				<label>Телефон*
-					<input type="tel" class="modal-input modal-input-tel" name="user-phone" required
-						pattern="\+[0-9]{11}">
+				<label class="modal-form-label">Телефон*
+					<span class="input-wrapper">
+						<svg class="modal-icon">
+							<use href='./img/sprite.svg#icon-phone-black-18dp'></use>
+						</svg>
+						<input type="tel" class="modal-input modal-input-tel" name="user-phone" required
+							pattern="\+[0-9]{11}">
+					</span>
 				</label>
 
-				<label>Почта
-					<input type="email" class="modal-input modal-input-email" name="user-email">
+				<label class="modal-form-label">Почта
+					<span class="input-wrapper">
+						<svg class="modal-icon">
+							<use href='./img/sprite.svg#icon-email-black-18dp'></use>
+						</svg>
+						<input type="email" class="modal-input modal-input-email" name="user-email">
+					</span>
 				</label>
 
-				<label>Комментарий
+				<label class="modal-form-label">Комментарий
 					<textarea name="user-message" class="modal-textarea" placeholder="Введите текст"></textarea>
 				</label>
 
-				<label class="label-chekbox">
-					<input type="checkbox" name="contract" value="accept" required>
-					Соглашаюсь с рассылкой и принимаю &nbsp<a href="">Условия договора</a>
+				<label class="label-checkbox">
+					<input class="modal-checkbox-input" type="checkbox" name="contract" value="accept" required>
+					<span class="checkbox-text">
+						Соглашаюсь с рассылкой и принимаю<a href="">&nbsp;Условия договора</a>
+					</span>
 				</label>
 
 				<button type="submit" class="modal-form-submit-btn">
