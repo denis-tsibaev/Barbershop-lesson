@@ -777,7 +777,8 @@ p {
   transition: opacity 250ms linear;
 }
 
-.modal-form-submit-btn:hover {
+.modal-form-submit-btn:hover,
+.modal-form-submit-btn:focus {
   opacity: 1;
 }
 
@@ -873,6 +874,10 @@ p {
 .modal-checkbox-input:checked + .checkbox-text::before {
   background-color: var(--accent);
   border: 3px solid var(--white-color);
+}
+
+.modal-checkbox-input:focus + .checkbox-text::before {
+  outline: 1px solid var(--accent);
 }
 
 /* Сравнительно новый сособ прятять чекбокс */
