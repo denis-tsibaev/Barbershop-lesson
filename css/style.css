@@ -110,6 +110,48 @@ p {
   padding: 130px 0;
 }
 
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.top__social-links {
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+
+.social-links::before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  display: block;
+  flex-shrink: 0;
+  background: var(--font-dark-color);
+  margin-right: 40px;
+}
+
+.social-links__list-item {
+  margin-right: 40px;
+}
+
+.social-links__list-item:last-child {
+  margin-right: 0;
+}
+
+.social-links__link,
+.social-links__link:visited {
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.2em;
+  color: var(--font-dark-color);
+}
+
+.social-links__link:hover,
+.social-links__link:focus,
+.social-links__link:active {
+  color: var(--accent);
+}
+
 .address {
   font-style: normal;
 }
@@ -141,12 +183,12 @@ p {
   background-color: var(--accent);
 }
 
-.modal-open-btn-light,
+.modal-open-btn_light,
 .form-submit-btn {
   color: var(--white-color);
 }
 
-.modal-open-btn-dark {
+.modal-open-btn_dark {
   color: var(--font-dark-color);
 }
 /* =======//COMPONENTS======= */
@@ -208,53 +250,17 @@ p {
 /* =======//Шапка сайта======= */
 
 /* =======top======= */
-.top .container {
+.top__container {
   display: flex;
 }
 
-.top-left {
+.top__left {
   width: 100px;
   display: flex;
   align-items: flex-end;
 
   padding-left: 23px;
   padding-bottom: 40px;
-}
-
-.top-left .list {
-  /* background-color: lightskyblue; */
-  display: flex;
-  align-items: center;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-}
-
-.top-left .list::before {
-  content: "";
-  height: 1px;
-  width: 60px;
-  display: block;
-  flex-shrink: 0;
-  background: var(--font-dark-color);
-  margin-right: 40px;
-}
-
-.top-left .list .item:not(:last-child) {
-  margin-right: 40px;
-}
-
-.top-left a,
-.top-left a:visited {
-  font-size: 11px;
-  line-height: 1.364;
-  letter-spacing: 0.2em;
-  color: var(--font-dark-color);
-}
-
-.top-left a:hover,
-.top-left a:focus,
-.top-left a:active {
-  color: var(--accent);
 }
 
 .top-right {
@@ -280,9 +286,6 @@ p {
 /* =======//top======= */
 
 /* =======О нас======= */
-.about {
-}
-
 .about .container {
   display: flex;
 }
@@ -650,43 +653,12 @@ p {
   align-items: center;
 }
 
-.footer .list {
-  display: flex;
-  align-items: center;
-}
-
-.footer .list::before {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 60px;
-  background: var(--font-dark-color);
-  margin-right: 40px;
-}
-
-.footer .list li:not(:last-child) {
-  margin-right: 40px;
-}
-
-.footer a {
-  font-size: 11px;
-  line-height: 1.364;
-  letter-spacing: 0.2em;
-  color: var(--font-dark-color);
-}
-
 .footer p {
   font-style: normal;
   font-size: 11px;
   line-height: 1.363;
   letter-spacing: 0.2em;
   color: var(--font-light-color);
-}
-
-.footer a:hover,
-.footer a:focus,
-.footer a:active {
-  color: var(--accent);
 }
 
 /* бэкдроп, модальное окно и форма */
@@ -786,7 +758,7 @@ p {
 .modal-close-btn {
   background-color: transparent;
   border: 1px solid var(--font-dark-color);
-  padding: 10px 15px;
+  padding: 6px 10px;
   border-radius: 50%;
 
   position: absolute;
@@ -794,13 +766,16 @@ p {
   right: 10px;
   cursor: pointer;
 
+  transform: scale(1);
   transition: background-color 250ms, color 500ms;
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: var(--font-dark-color);
+  background-color: var(--accent);
   color: var(--white-color);
+  border-color: var(--white-color);
+  transform: scale(1.1);
 }
 
 .modal-form a {
