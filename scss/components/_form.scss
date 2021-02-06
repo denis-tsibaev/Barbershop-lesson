@@ -1,0 +1,81 @@
+.form-submit-btn {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  min-width: 160px;
+  height: 40px;
+  border: 1px solid $accent;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+  color: $white-color;
+  background-color: $accent;
+}
+
+.form-submit-btn {
+  color: $white-color;
+}
+
+.contacts-left .form {
+  width: 560px;
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-input-name {
+  width: 270px;
+}
+
+.form-input-tel {
+  width: 260px;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 90px;
+  margin: 44px 0;
+  resize: none;
+}
+
+.form-input,
+.form-textarea {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+
+  background: none;
+  border: none;
+  color: $white-color;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding: 8px 0;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-bottom-color: $white-color;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+  text-transform: uppercase;
+}
+
+.form-input:focus::placeholder,
+.form-textarea:focus::placeholder {
+  color: $white-color;
+}

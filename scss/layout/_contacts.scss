@@ -1,0 +1,62 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  background-color: #191c26;
+}
+
+.address {
+  // убирает курсив адреса
+  font-style: normal;
+}
+
+.contacts-left,
+.contacts-right {
+  width: 50%;
+}
+
+.contacts-left {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.contacts-right {
+  background-image: url("../img/bg-contacts.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  padding: 130px 100px;
+}
+
+.contacts h2 {
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.contacts p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $font-light-color;
+}
+
+.contacts-right .list li {
+  margin-bottom: 20px;
+}
+
+.contacts-right .list .city {
+  width: 190px;
+}
+
+.contacts-right .subtitle {
+  margin-top: 70px;
+}
+
+.contacts a {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+  color: $font-light-color;
+}

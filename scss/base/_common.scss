@@ -1,0 +1,76 @@
+body {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $second-font;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 42px;
+  line-height: 1.167;
+  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.857;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.list-no-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 130px 0;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.subtitle::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+}
