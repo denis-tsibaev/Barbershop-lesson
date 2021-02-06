@@ -4,16 +4,16 @@
 
 .about .list {
   display: flex;
-}
 
-.about .list .item:not(:last-child) {
-  margin-right: 30px;
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-right {
   padding-left: 64px;
-}
 
-.about-right .description {
-  margin-bottom: 20px;
+  .description {
+    margin-bottom: 20px;
+  }
 }

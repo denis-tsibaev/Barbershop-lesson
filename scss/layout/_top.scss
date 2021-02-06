@@ -6,7 +6,6 @@
   width: 100px;
   display: flex;
   align-items: flex-end;
-
   padding-left: 23px;
   padding-bottom: 40px;
 }
@@ -23,11 +22,11 @@
   padding-right: 525px;
   padding-bottom: 206px;
   padding-left: 100px;
-}
 
-.top-right h1 {
-  font-size: 72px;
-  line-height: 1.181;
-  letter-spacing: 0.05em;
-  color: $white-color;
+  h1 {
+    font-size: 72px;
+    line-height: 1.181;
+    letter-spacing: 0.05em;
+    color: $white-color;
+  }
 }

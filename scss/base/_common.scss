@@ -20,7 +20,6 @@ h2 {
 
 a {
   text-decoration: none;
-
   transition-property: color;
   transition-duration: 250ms;
 }
@@ -58,14 +57,14 @@ p {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-}
 
-.subtitle::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 1px;
-  margin-right: 20px;
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+  }
 }
 
 .description {
@@ -73,4 +72,21 @@ p {
   font-size: 18px;
   line-height: 1.667;
   letter-spacing: 0.02em;
+}
+
+.label-checkbox {
+  position: relative;
+  padding-left: 35px;
+}
+
+.checkbox-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  outline: 1px solid $font-dark-color;
 }

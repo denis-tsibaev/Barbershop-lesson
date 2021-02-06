@@ -1,17 +1,17 @@
 .footer {
   padding: 56px 0;
-}
 
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.footer p {
-  font-style: normal;
-  font-size: 11px;
-  line-height: 1.363;
-  letter-spacing: 0.2em;
-  color: $font-light-color;
+  p {
+    font-style: normal;
+    font-size: 11px;
+    line-height: 1.363;
+    letter-spacing: 0.2em;
+    color: $font-light-color;
+  }
 }

@@ -2,3 +2,15 @@
   width: 20px;
   height: 20px;
 }
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+
+  transition: fill 250ms linear;
+}

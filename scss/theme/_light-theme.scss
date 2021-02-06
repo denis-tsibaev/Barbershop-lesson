@@ -1,11 +1,15 @@
 .subtitle-light {
   color: rgba(157, 164, 189, 0.6);
-}
 
-.subtitle-light::before {
-  background-color: rgba(157, 164, 189, 0.6);
+  &::before {
+    background-color: rgba(157, 164, 189, 0.6);
+  }
 }
 
 .description-light {
   color: $font-light-color;
+}
+
+.modal-open-btn_light {
+  color: $white-color;
 }

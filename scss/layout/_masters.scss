@@ -1,62 +1,61 @@
 .masters {
   background-color: $bg-light;
-}
 
-.masters .list {
-  display: flex;
-  justify-content: space-between;
-}
+  h2 {
+    color: $font-dark-color;
+    margin-bottom: 44px;
+  }
 
-.masters .list .description {
-  padding: 30px;
-  text-align: center;
-}
+  .list {
+    display: flex;
+    justify-content: space-between;
 
-.masters h2 {
-  color: $font-dark-color;
-  margin-bottom: 44px;
-}
+    .description {
+      padding: 30px;
+      text-align: center;
+    }
 
-.masters .list h3 {
-  font-size: 18px;
-  line-height: 1.389;
-  letter-spacing: 0.02em;
-  color: $font-dark-color;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
+    h3 {
+      font-size: 18px;
+      line-height: 1.389;
+      letter-spacing: 0.02em;
+      color: $font-dark-color;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
 
-.masters .list p {
-  font-size: 14px;
-  line-height: 1.357;
-  letter-spacing: 0.02em;
-  color: $accent;
-  margin-bottom: 30px;
-}
+    p {
+      font-size: 14px;
+      line-height: 1.357;
+      letter-spacing: 0.02em;
+      color: $accent;
+      margin-bottom: 30px;
+    }
+  }
 
-.masters .social {
-  display: flex;
-  justify-content: center;
-}
+  .social {
+    display: flex;
+    justify-content: center;
 
-.masters__list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  background-color: $white-color;
-  border-radius: 50%;
+    li:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 
-  transition: all 250ms;
-}
+  &__list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: $white-color;
+    border-radius: 50%;
+    transition: all 250ms;
 
-.masters__list-link:hover,
-.masters__list-link:focus {
-  background-color: $font-dark-color;
-  fill: $accent;
-}
-
-.masters .social li:not(:last-child) {
-  margin-right: 10px;
+    &:hover,
+    &:focus {
+      background-color: $font-dark-color;
+      fill: $accent;
+    }
+  }
 }

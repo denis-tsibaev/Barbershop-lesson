@@ -11,19 +11,16 @@
   height: 40px;
   border: 1px solid $accent;
   border-radius: 25px;
+  color: $white-color;
   background-color: transparent;
   cursor: pointer;
   transition: all 250ms;
-}
 
-.form-submit-btn:hover,
-.form-submit-btn:focus {
-  color: $white-color;
-  background-color: $accent;
-}
-
-.form-submit-btn {
-  color: $white-color;
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent;
+  }
 }
 
 .contacts-left .form {
@@ -55,27 +52,69 @@
   font-size: 11px;
   line-height: 1.364;
   letter-spacing: 0.1em;
-
   background: none;
   border: none;
   color: $white-color;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   padding: 8px 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-bottom-color: $white-color;
+  }
+
+  &::placeholder {
+    color: rgba(157, 164, 189, 0.4);
+    text-transform: uppercase;
+  }
+  &:focus::placeholder {
+    color: $white-color;
+  }
 }
 
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  border-bottom-color: $white-color;
+.modal-form-label {
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+  color: #757575;
+  padding-bottom: 10px;
+
+  &:focus-within .modal-icon {
+    fill: $accent;
+  }
+
+  &:focus-within .modal-input,
+  &:focus-within .modal-textarea {
+    border-color: $accent;
+  }
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: rgba(157, 164, 189, 0.4);
-  text-transform: uppercase;
+.modal-checkbox-input:checked + .checkbox-text::before {
+  background-color: $accent;
+  border: 3px solid $white-color;
 }
 
-.form-input:focus::placeholder,
-.form-textarea:focus::placeholder {
-  color: $white-color;
+.modal-checkbox-input:focus + .checkbox-text::before {
+  outline: 1px solid $accent;
 }
+
+//  Сравнительно новый способ прятать чекбокс
+.modal-checkbox-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// Олдскульный способ прятать чекбокс
+// .modal-checkbox-input {
+// 		  position: absolute;
+// 		  width: 1px;
+// 		  height: 1px;
+// 		  margin: -1px;
+// 		  border: 0;
+// 		  padding: 0;
+// 		  clip: rect(0 0 0 0);
+// 		  overflow: hidden;
+// 	  }

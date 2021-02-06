@@ -1,45 +1,4 @@
-.modal-open-btn {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.333;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 12px 18px;
-  min-width: 160px;
-  height: 40px;
-  border: 1px solid $accent;
-  border-radius: 25px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 250ms;
-}
-
-.modal-open-btn:hover,
-.modal-open-btn:focus {
-  color: $white-color;
-  background-color: $accent;
-}
-
-.modal-open-btn_light {
-  color: $white-color;
-}
-
-.modal-open-btn_dark {
-  color: $font-dark-color;
-}
-
-.about-right .modal-open-btn {
-  margin-top: 40px;
-}
-
-.services .modal-open-btn {
-  display: block;
-  margin: 0 auto;
-}
-
-//  бэкдроп, модальное окно и форма
+//  бэкдроп, модальное окно
 .backdrop {
   position: fixed;
   top: 0;
@@ -49,37 +8,40 @@
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
   transition: opacity 500ms;
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 
-.backdrop .modal {
-  width: 528px;
-  height: 581px;
-  background-color: $white-color;
-  border-radius: 10px;
+  .modal {
+    width: 528px;
+    height: 581px;
+    background-color: $white-color;
+    border-radius: 10px;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 500ms;
 
-  padding: 40px;
+    h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition-duration: 500ms;
-}
+    .modal-form {
+      display: flex;
+      flex-direction: column;
 
-.modal h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-.modal-form {
-  display: flex;
-  flex-direction: column;
+      a {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .modal-input,
@@ -88,7 +50,6 @@
   width: 100%;
   height: 40px;
   margin-top: 4px;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
@@ -100,74 +61,12 @@
   padding: 12px 16px;
 }
 
-.modal-form-label {
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
-  color: #757575;
-  padding-bottom: 10px;
-}
-
-/* кнопка внутри модалки */
-.modal-form-submit-btn {
-  outline: none;
-  border: none;
-  align-self: center;
-  font-weight: bold;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-
-  color: $white-color;
-  background-color: $accent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 10px 55px;
-  opacity: 0.7;
-  transition: opacity 250ms linear;
-}
-
-.modal-form-submit-btn:hover,
-.modal-form-submit-btn:focus {
-  opacity: 1;
-}
-
-/* Кнопка закрытия модального окна */
-.modal-close-btn {
-  background-color: transparent;
-  border: 1px solid $font-dark-color;
-  padding: 6px 10px;
-  border-radius: 50%;
-
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-
-  transform: scale(1);
-  transition: background-color 250ms, color 500ms;
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  background-color: $accent;
-  color: $white-color;
-  border-color: $white-color;
-  transform: scale(1.1);
-}
-
-.modal-form a {
-  color: $accent;
-  text-decoration: underline;
-}
-
 .label-checkbox {
   display: flex;
   align-items: center;
-
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: #757575;
   margin-bottom: 30px;
 }
@@ -180,72 +79,3 @@
   position: relative;
   display: block;
 }
-
-.modal-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-
-  width: 18px;
-  height: 18px;
-
-  transition: fill 250ms linear;
-}
-
-.modal-form-label:focus-within .modal-icon {
-  fill: $accent;
-}
-
-.modal-form-label:focus-within .modal-input,
-.modal-form-label:focus-within .modal-textarea {
-  border-color: $accent;
-}
-
-.label-checkbox {
-  position: relative;
-  padding-left: 35px;
-}
-
-.checkbox-text::before {
-  content: "";
-  display: block;
-
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 16px;
-  height: 16px;
-  outline: 1px solid $font-dark-color;
-}
-
-.modal-checkbox-input:checked + .checkbox-text::before {
-  background-color: $accent;
-  border: 3px solid $white-color;
-}
-
-.modal-checkbox-input:focus + .checkbox-text::before {
-  outline: 1px solid $accent;
-}
-
-/* Сравнительно новый сособ прятять чекбокс */
-.modal-checkbox-input {
-  position: absolute;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-/* Олдскульный способ прятать чекбокс */
-/* .modal-checkbox-input {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		margin: -1px;
-		border: 0;
-		padding: 0;
-		clip: rect(0 0 0 0);
-		overflow: hidden;
-	} */

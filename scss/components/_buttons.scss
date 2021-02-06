@@ -1,0 +1,79 @@
+.modal-open-btn {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  min-width: 160px;
+  height: 40px;
+  border: 1px solid $accent;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 250ms;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $accent;
+  }
+}
+
+.about-right .modal-open-btn {
+  margin-top: 40px;
+}
+
+.services .modal-open-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+// Кнопка "Отправить" внутри модалки
+.modal-form-submit-btn {
+  outline: none;
+  border: none;
+  align-self: center;
+  font-weight: bold;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $white-color;
+  background-color: $accent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 55px;
+  opacity: 0.7;
+  transition: opacity 250ms linear;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+/* Кнопка закрытия модального окна */
+.modal-close-btn {
+  background-color: transparent;
+  border: 1px solid $font-dark-color;
+  padding: 6px 10px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  transform: scale(1);
+  transition: background-color 250ms, color 500ms;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: $white-color;
+    border-color: $white-color;
+    transform: scale(1.1);
+  }
+}
