@@ -40,9 +40,7 @@ p {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding: 0 31px;
 }
 
 .section {
@@ -69,8 +67,8 @@ p {
 
 .description {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.667;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
 }
 
@@ -89,4 +87,19 @@ p {
   width: 16px;
   height: 16px;
   outline: 1px solid $font-dark-color;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 39px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 15px;
+    max-width: 1200px;
+  }
 }
