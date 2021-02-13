@@ -832,6 +832,9 @@ p {
 
 .masters .list .masters-list-item {
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .masters .list .description {
@@ -864,25 +867,40 @@ p {
 .masters .list .description .social li {
   width: 44px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .masters .list .description .social li .masters__list-link {
   width: 100%;
   height: 100%;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
 .masters .list .description .social li .masters__list-link:hover, .masters .list .description .social li .masters__list-link:focus {
-  background-color: #303030;
   fill: #ff6c00;
 }
 
 .masters .list .description .social li:not(:last-child) {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .masters .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .masters .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .gallery .list {
