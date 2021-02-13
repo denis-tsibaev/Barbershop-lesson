@@ -1,54 +1,128 @@
 .services {
   background-color: #111319;
-  background-image: url("../img/bg-services.png");
+  background-image: url("../../img/services/bg-services-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
 
   h2 {
     color: $white-color;
+    padding-bottom: 44px;
   }
 
   .prices {
-    display: flex;
+    padding: 30px;
     margin-bottom: 50px;
+    background-image: linear-gradient(
+      180deg,
+      #171a24 0%,
+      rgba(23, 26, 36, 0.2) 100%
+    );
 
-    .list {
-      width: 50%;
-      padding: 30px 40px;
+    .list span {
+      font-size: 14px;
+      line-height: 2.142;
+      letter-spacing: 0.02em;
+      color: $font-light-color;
+    }
 
-      span {
-        font-size: 18px;
-        font-weight: normal;
-        line-height: 1.667;
-        letter-spacing: 0.02em;
-        color: $font-light-color;
-      }
+    .list li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  }
+}
 
-      li {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
+@media screen and (min-width: 768px) {
+  .services {
+    background-image: url("../../img/services/bg-services-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    background-image: url("../../img/services/bg-services-desktop.png");
+
+    .prices {
+      display: flex;
+      background-image: none;
+      padding: 0;
+
+      .list {
+        width: 50%;
+        padding: 30px 40px;
+
+        span {
+          font-size: 18px;
+          font-weight: normal;
+          line-height: 1.667;
+          letter-spacing: 0.02em;
+          color: $font-light-color;
+        }
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &:first-child {
+          background-image: linear-gradient(
+            180deg,
+            #171a24 0%,
+            rgba(23, 26, 36, 0.2) 100%
+          );
+        }
 
         &:last-child {
-          margin-bottom: 0;
+          background-image: linear-gradient(
+            180deg,
+            #090b13 0%,
+            rgba(9, 11, 19, 0.2) 100%
+          );
         }
       }
-
-      &:first-child {
-        background-image: linear-gradient(
-          180deg,
-          #171a24 0%,
-          rgba(23, 26, 36, 0.2) 100%
-        );
-      }
-
-      &:last-child {
-        background-image: linear-gradient(
-          180deg,
-          #090b13 0%,
-          rgba(9, 11, 19, 0.2) 100%
-        );
-      }
     }
+  }
+}
+
+// Картинки для retina экранов
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .services {
+    background-image: url("../../img/services/bg-services-mobile@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .services {
+    background-image: url("../../img/services/bg-services-tablet@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .services {
+    background-image: url("../../img/services/bg-services-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

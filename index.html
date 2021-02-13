@@ -91,8 +91,12 @@
 				<ul class="list list-no-style">
 					<li class="item">
 						<picture>
+							<source srcset="./img/about/about-desktop1.webp 1x, ./img/about/about-desktop1@2x.webp  2x"
+								media="(min-width: 1200px)" type="image/webp">
 							<source srcset="./img/about/about-desktop1.jpg 1x, ./img/about/about-desktop1@2x.jpg 2x"
 								media="(min-width: 1200px)">
+							<source srcset="./img/about/about-tablet1.webp 1x, ./img/about/about-tablet1@2x.webp 2x"
+								media="(min-width: 768px)" type="image/webp">
 							<source srcset="./img/about/about-tablet1.jpg 1x, ./img/about/about-tablet1@2x.jpg 2x"
 								media="(min-width: 768px)">
 							<img srcset="./img/about/about-tablet1.jpg 1x, ./img/about/about-tablet1@2x.jpg 2x"
@@ -101,8 +105,12 @@
 					</li>
 					<li class="item">
 						<picture>
+							<source srcset="./img/about/about-desktop2.webp 1x, ./img/about/about-desktop2@2x.webp 2x"
+								media="(min-width: 1200px)" type="image/webp">
 							<source srcset="./img/about/about-desktop2.jpg 1x, ./img/about/about-desktop2@2x.jpg 2x"
 								media="(min-width: 1200px)">
+							<source srcset="./img/about/about-tablet2.webp 1x, ./img/about/about-tablet2@2x.webp 2x"
+								media="(min-width: 768px)" type="image/webp">
 							<source srcset="./img/about/about-tablet2.jpg 1x, ./img/about/about-tablet2@2x.jpg 2x"
 								media="(min-width: 768px)">
 							<img srcset="./img/about/about-tablet2.jpg 1x, ./img/about/about-tablet2@2x.jpg 2x"
@@ -112,8 +120,8 @@
 				</ul>
 				<div class="about-right">
 					<p class="subtitle subtitle-dark">о нас</p>
-					<h2>Лучший Барбершоп <br>
-						твоего города</h2>
+					<h3>Лучший Барбершоп <br>
+						твоего города</h3>
 					<p class="description description-dark">Если ты хочешь добавить в свой образ больше уверенности –
 						тебе
 						точно к нам.</p>
@@ -129,7 +137,7 @@
 
 
 		<!-- Услуги и цены -->
-		<!-- <section id="services" class="services section">
+		<section id="services" class="services section">
 			<div class="container">
 				<p class="subtitle subtitle-light">Проведи время в компании лучших мастеров</p>
 				<h2>Услуги и цены</h2>
@@ -166,13 +174,19 @@
 
 				<button class="modal-open-btn modal-open-btn_light" data-modal-open>онлайн-запись</button>
 			</div>
-		</section> -->
+		</section>
 		<!-- /Услуги и цены -->
 
 
 		<!-- Достижения  -->
-		<!-- <section class="achievements section">
+		<section class="achievements section">
 			<div class="container">
+				<div class="achievements-right">
+					<p class="subtitle subtitle-dark">старая традиционная школа</p>
+					<h2>Почему приходят <br> именно к нам?</h2>
+					<p class="description description-dark">О нас говорят только хорошее. Но лучше 1 раз увидеть и
+						прочувствовать, чем 10 раз прочитать. </p>
+				</div>
 				<div class="achievements-left">
 					<ul class="list list-no-style">
 						<li>
@@ -195,51 +209,56 @@
 						</li>
 					</ul>
 				</div>
-				<div class="achievements-right">
-					<p class="subtitle subtitle-dark">старая традиционная школа</p>
-					<h2>Почему приходят <br> именно к нам?</h2>
-					<p class="description description-dark">О нас говорят только хорошее. Но лучше 1 раз увидеть и
-						прочувствовать, чем 10 раз прочитать. </p>
-				</div>
 			</div>
-		</section> -->
+		</section>
 		<!-- Достижения -->
 
 		<!-- Наши мастера -->
-		<!-- <section id="masters" class="masters section">
+		<section id="masters" class="masters section">
 			<div class="container">
 				<p class="subtitle subtitle-dark">для настоящих ценителей атмосферы</p>
 				<h2>Наши мастера</h2>
 				<ul class="list list-no-style">
-					<li>
-						<img src="./img/master1.jpg" alt="John Smith" width="370" height="346">
+					<li class="masters-list-item">
+						<picture>
+							<source
+								srcset="./img/masters/desktop/master1-desktop.jpg 1x, ./img/masters/desktop/master1-desktop@2x.jpg 2x"
+								media="(min-width: 1200px)">
+							<source
+								srcset="./img/masters/tablet/master1-tablet.jpg 1x, ./img/masters/tablet/master1-tablet@2x.jpg 2x"
+								media="(min-width: 768px)">
+							<source
+								srcset="./img/masters/mobile/master1-mobile.jpg 1x, ./img/masters/mobile/master1-mobile@2x.jpg 2x"
+								media="(min-width: 480px)">
+							<img src="./img/masters/mobile/master1-mobile.jpg" alt="мастер барбершопа John Smith">
+						</picture>
 						<div class="description">
 							<h3>John Smith</h3>
 							<p>Extreme Barber</p>
 							<ul class="social list-no-style">
 								<li>
-									<a href="" class="masters__list-link" aria-label="Иконка инстаграма">
+									<a href="#" class="masters__list-link" aria-label="Иконка инстаграма">
 										<svg class="svg-icon">
 											<use href="./img/sprite.svg#icon-instagram"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="" class="masters__list-link" aria-label="Иконка твиттера">
+									<a href="#" class="masters__list-link" aria-label="Иконка твиттера">
 										<svg class="svg-icon">
 											<use href="./img/sprite.svg#icon-twitter"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="" class="masters__list-link" aria-label="Иконка фейсбука">
+									<a href="#" class="masters__list-link" aria-label="Иконка фейсбука">
 										<svg class="svg-icon">
 											<use href="./img/sprite.svg#icon-facebook"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="" class="masters__list-link" aria-label="Иконка ЛинкедИН">
+									<a href="#" class="masters__list-link" aria-label="Иконка ЛинкедИН">
 										<svg class="svg-icon">
 											<use href="./img/sprite.svg#icon-linkedin"></use>
 										</svg>
@@ -249,7 +268,19 @@
 						</div>
 
 					</li>
-					<li><img src="./img/master2.jpg" alt="Michele Doe" width="370" height="346">
+					<li class="masters-list-item">
+						<picture>
+							<source
+								srcset="./img/masters/desktop/master2-desktop.jpg 1x, ./img/masters/desktop/master2-desktop@2x.jpg 2x"
+								media="(min-width: 1200px)">
+							<source
+								srcset="./img/masters/tablet/master2-tablet.jpg 1x, ./img/masters/tablet/master2-tablet@2x.jpg 2x"
+								media="(min-width: 768px)">
+							<source
+								srcset="./img/masters/mobile/master2-mobile.jpg 1x, ./img/masters/mobile/master2-mobile@2x.jpg 2x"
+								media="(min-width: 480px)">
+							<img src="./img/masters/mobile/master2-mobile.jpg" alt="Michele Doe">
+						</picture>
 						<div class="description">
 							<h3>Michele Doe</h3>
 							<p>Extreme Barber</p>
@@ -285,7 +316,19 @@
 							</ul>
 						</div>
 					</li>
-					<li><img src="./img/master3.jpg" alt="Alan Black" width="370" height="346">
+					<li class="masters-list-item">
+						<picture>
+							<source
+								srcset="./img/masters/desktop/master3-desktop.jpg 1x, ./img/masters/desktop/master3-desktop@2x.jpg 2x"
+								media="(min-width: 1200px)">
+							<source
+								srcset="./img/masters/tablet/master3-tablet.jpg 1x, ./img/masters/tablet/master3-tablet@2x.jpg 2x"
+								media="(min-width: 768px)">
+							<source
+								srcset="./img/masters/mobile/master3-mobile.jpg 1x, ./img/masters/mobile/master3-mobile@2x.jpg 2x"
+								media="(min-width: 480px)">
+							<img src="./img/masters/mobile/master3-mobile.jpg" alt="Alan Black">
+						</picture>
 						<div class="description">
 							<h3>Alan Black</h3>
 							<p>Extreme Barber</p>
@@ -323,7 +366,7 @@
 					</li>
 				</ul>
 			</div>
-		</section> -->
+		</section>
 		<!-- /Наши мастера -->
 
 		<!-- Фотогалеря -->

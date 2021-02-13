@@ -1,23 +1,29 @@
 .achievements {
   .container {
-    display: flex;
+    display: block;
   }
 
   h2 {
     color: $font-dark-color;
   }
 
+  .description {
+    margin-bottom: 44px;
+  }
+
   .achievements-left {
-    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .list {
       display: flex;
 
       li {
-        width: 170px;
+        width: 193px;
         height: 133px;
         margin-bottom: 30px;
-        padding: 20px;
+        padding: 20px 35px;
         background-color: $bg-light;
 
         &:nth-child(even) {
@@ -33,7 +39,6 @@
       font-weight: bold;
       font-size: 42px;
       line-height: 1.357;
-      //    text-align: center;
       letter-spacing: 0.05em;
     }
 
@@ -48,10 +53,97 @@
       text-align: center;
     }
   }
+}
 
-  .achievements-right {
-    //    width: 630px;
-    padding-left: 130px;
-    padding-right: 200px;
+@media screen and (min-width: 768px) {
+  .achievements .achievements-left {
+    align-items: flex-end;
+
+    .list li {
+      width: 210px;
+      padding: 20px 44px;
+    }
+  }
+
+  .achievements .achievements-right {
+    max-width: 450px;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .achievements {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .achievements-left {
+        width: 370px;
+        padding-right: 130px;
+
+        .list {
+          li {
+            width: 170px;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+// .achievements {
+//   .container {
+//     display: flex;
+//   }
+
+//   h2 {
+//     color: $font-dark-color;
+//   }
+
+//   .achievements-left {
+//     width: 370px;
+
+//     .list {
+//       display: flex;
+
+//       li {
+//         width: 170px;
+//         height: 133px;
+//         margin-bottom: 30px;
+//         padding: 20px;
+//         background-color: $bg-light;
+
+//         &:nth-child(even) {
+//           margin-left: 30px;
+//           margin-top: 30px;
+//           margin-bottom: 0;
+//         }
+//       }
+//     }
+
+//     .number {
+//       font-style: normal;
+//       font-weight: bold;
+//       font-size: 42px;
+//       line-height: 1.357;
+//       //    text-align: center;
+//       letter-spacing: 0.05em;
+//     }
+
+//     sup {
+//       color: $accent;
+//     }
+
+//     p {
+//       font-size: 11px;
+//       line-height: 1.364;
+//       color: $font-dark-color;
+//       text-align: center;
+//     }
+//   }
+
+//   .achievements-right {
+//     //    width: 630px;
+//     padding-left: 130px;
+//     padding-right: 200px;
+//   }
+// }

@@ -7,55 +7,122 @@
   }
 
   .list {
-    display: flex;
-    justify-content: space-between;
+    .masters-list-item {
+      margin-bottom: 64px;
+    }
 
     .description {
-      padding: 30px;
+      padding: 30px 30px 0 30px;
       text-align: center;
-    }
 
-    h3 {
-      font-size: 18px;
-      line-height: 1.389;
-      letter-spacing: 0.02em;
-      color: $font-dark-color;
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
+      h3 {
+        font-size: 18px;
+        line-height: 1.389;
+        letter-spacing: 0.02em;
+        color: $font-dark-color;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
 
-    p {
-      font-size: 14px;
-      line-height: 1.357;
-      letter-spacing: 0.02em;
-      color: $accent;
-      margin-bottom: 30px;
-    }
-  }
+      p {
+        font-size: 14px;
+        line-height: 1.357;
+        letter-spacing: 0.02em;
+        color: $accent;
+        margin-bottom: 30px;
+      }
 
-  .social {
-    display: flex;
-    justify-content: center;
+      .social {
+        display: flex;
+        justify-content: center;
 
-    li:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
+        li {
+          width: 44px;
+          height: 44px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-  &__list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background-color: $white-color;
-    border-radius: 50%;
-    transition: all 250ms;
+          .masters__list-link {
+            width: 100%;
+            height: 100%;
+            // background-color: $white-color;
+            background-color: red;
+            border-radius: 50%;
 
-    &:hover,
-    &:focus {
-      background-color: $font-dark-color;
-      fill: $accent;
+            &:hover,
+            &:focus {
+              background-color: $font-dark-color;
+              fill: $accent;
+            }
+          }
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+      }
     }
   }
 }
+// .masters {
+//   background-color: $bg-light;
+
+//   h2 {
+//     color: $font-dark-color;
+//     margin-bottom: 44px;
+//   }
+
+//   .list {
+//     display: flex;
+//     justify-content: space-between;
+
+//     .description {
+//       padding: 30px;
+//       text-align: center;
+//     }
+
+//     h3 {
+//       font-size: 18px;
+//       line-height: 1.389;
+//       letter-spacing: 0.02em;
+//       color: $font-dark-color;
+//       margin-top: 0;
+//       margin-bottom: 8px;
+//     }
+
+//     p {
+//       font-size: 14px;
+//       line-height: 1.357;
+//       letter-spacing: 0.02em;
+//       color: $accent;
+//       margin-bottom: 30px;
+//     }
+//   }
+
+//   .social {
+//     display: flex;
+//     justify-content: center;
+
+//     li:not(:last-child) {
+//       margin-right: 10px;
+//     }
+//   }
+
+//   &__list-link {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 44px;
+//     height: 44px;
+//     background-color: $white-color;
+//     border-radius: 50%;
+//     transition: all 250ms;
+
+//     &:hover,
+//     &:focus {
+//       background-color: $font-dark-color;
+//       fill: $accent;
+//     }
+//   }
+//
