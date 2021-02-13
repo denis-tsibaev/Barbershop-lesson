@@ -14,8 +14,8 @@ h2 {
 }
 
 h2 {
-  font-size: 42px;
-  line-height: 1.167;
+  font-size: 28px;
+  line-height: 1.178;
   letter-spacing: 0.05em;
 }
 
@@ -45,7 +45,7 @@ p {
 }
 
 .section {
-  padding: 130px 0;
+  padding: 84px 0;
 }
 
 .subtitle {
@@ -96,12 +96,23 @@ p {
     max-width: 768px;
     margin: 0 auto;
   }
+  .section {
+    padding: 100px 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 42px;
+    line-height: 1.167;
+    letter-spacing: 0.05em;
+  }
   .container {
     padding: 0 15px;
     max-width: 1200px;
+  }
+  .section {
+    padding: 130px 0;
   }
 }
 
@@ -585,24 +596,42 @@ p {
   }
 }
 
-.about .container {
-  display: flex;
-}
-
 .about .list {
-  display: flex;
+  display: none;
 }
 
-.about .list .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.about-right {
-  padding-left: 64px;
-}
-
-.about-right .description {
+.about .description {
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about .list {
+    display: block;
+  }
+  .about .list li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .about .container {
+    display: flex;
+  }
+  .about-right {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about .container {
+    display: flex;
+  }
+  .about .list {
+    display: flex;
+  }
+  .about .list .item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .about-right {
+    padding-left: 64px;
+  }
 }
 
 .services {
