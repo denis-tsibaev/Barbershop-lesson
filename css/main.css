@@ -5,12 +5,6 @@ body {
   font-weight: 600;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 h1,
 h2,
 h3 {
@@ -33,6 +27,7 @@ h3 {
 
 a {
   text-decoration: none;
+  font-weight: normal;
   transition-property: color, fill, background-color;
   transition-duration: 250ms;
 }
@@ -356,30 +351,14 @@ p {
 }
 
 .contacts-left .form {
-  width: 560px;
   display: flex;
-  flex-direction: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
-.form-input-name {
-  width: 270px;
-}
-
-.form-input-tel {
-  width: 260px;
-}
-
-.form-textarea {
+.contacts-left .form .form-input,
+.contacts-left .form .form-textarea {
   width: 100%;
-  height: 90px;
-  margin: 44px 0;
-  resize: none;
-}
-
-.form-input,
-.form-textarea {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.364;
@@ -389,24 +368,51 @@ p {
   color: #ffffff;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   padding: 8px 0;
+  margin-bottom: 44px;
 }
 
-.form-input:hover, .form-input:focus,
-.form-textarea:hover,
-.form-textarea:focus {
+.contacts-left .form .form-input:hover, .contacts-left .form .form-input:focus,
+.contacts-left .form .form-textarea:hover,
+.contacts-left .form .form-textarea:focus {
   outline: none;
   border-bottom-color: #ffffff;
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
+.contacts-left .form .form-input::placeholder,
+.contacts-left .form .form-textarea::placeholder {
   color: rgba(157, 164, 189, 0.4);
   text-transform: uppercase;
 }
 
-.form-input:focus::placeholder,
-.form-textarea:focus::placeholder {
+.contacts-left .form .form-input:focus::placeholder,
+.contacts-left .form .form-textarea:focus::placeholder {
   color: #ffffff;
+}
+
+.contacts-left .form .form-textarea {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 44px;
+  resize: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts-left .form {
+    width: 560px;
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .form-input-name {
+    width: 270px;
+  }
+  .form-input-tel {
+    width: 260px;
+  }
+  .form-textarea {
+    margin: 44px;
+  }
 }
 
 .modal-form-label {
@@ -612,16 +618,16 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .about .list {
-    display: block;
-  }
-  .about .list li:not(:last-child) {
-    margin-bottom: 30px;
-  }
   .about .container {
     display: flex;
   }
-  .about-right {
+  .about .container .list {
+    display: block;
+  }
+  .about .container .list li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .about .container .about-right {
     padding-left: 30px;
   }
 }
@@ -630,13 +636,13 @@ p {
   .about .container {
     display: flex;
   }
-  .about .list {
+  .about .container .list {
     display: flex;
   }
-  .about .list .item:not(:last-child) {
+  .about .container .list .item:not(:last-child) {
     margin-right: 30px;
   }
-  .about-right {
+  .about .container .about-right {
     padding-left: 64px;
   }
 }
@@ -903,18 +909,39 @@ p {
   }
 }
 
-.gallery .list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .gallery .subtitle {
   margin-bottom: 44px;
+  line-height: 1.91;
+}
+
+.gallery .list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .gallery li:not(:nth-child(2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery .list li {
+    margin-bottom: 0;
+  }
 }
 
 .contacts {
-  display: flex;
-  justify-content: space-between;
   background-color: #191c26;
 }
 
@@ -924,54 +951,92 @@ p {
 
 .contacts .contacts-left,
 .contacts .contacts-right {
-  width: 50%;
+  padding: 84px 31px;
 }
 
-.contacts .contacts-left {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 40px;
+.contacts .contacts-left h2 {
+  text-align: center;
+  margin-bottom: 44px;
+  color: #ffffff;
 }
 
 .contacts .contacts-right {
-  background-image: url("../img/bg-contacts.png");
+  background-image: url("../../img/contacts/bg-contacts-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 50%;
-  padding: 130px 100px;
 }
 
-.contacts .contacts-right .subtitle {
-  margin-top: 70px;
-}
-
-.contacts .contacts-right .list .city {
-  width: 190px;
-}
-
-.contacts .contacts-right .list li {
-  margin-bottom: 20px;
-}
-
-.contacts h2 {
+.contacts .contacts-right h2 {
+  text-align: center;
   margin-bottom: 40px;
   color: #ffffff;
 }
 
-.contacts p {
-  font-weight: normal;
+.contacts .contacts-right .subtitle.subtitle-light {
+  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.contacts .contacts-right p {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
 
-.contacts a {
+.contacts .contacts-right a {
   font-size: 18px;
-  font-weight: normal;
   line-height: 1.667;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.contacts .contacts-right .list {
+  margin-bottom: 44px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts .contacts-right {
+    background-image: url("../../img/contacts/bg-contacts-tablet.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacts .contacts-left,
+  .contacts .contacts-right {
+    width: 50%;
+  }
+  .contacts .contacts-left {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+  }
+  .contacts .contacts-right {
+    background-image: url("../../img/contacts/bg-contacts-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    padding: 130px 100px;
+  }
+  .contacts .contacts-right .subtitle {
+    margin-top: 70px;
+  }
+  .contacts .contacts-right .list .city {
+    width: 190px;
+  }
+  .contacts .contacts-right .list li {
+    margin-bottom: 20px;
+  }
 }
 
 .footer {
